@@ -18,6 +18,8 @@ defmodule HelloWorldWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/hello", HelloWorldController, :index
+    get "/hello/:messenger", HelloWorldController, :show
   end
 
   # Other scopes may use custom stacks.
